@@ -1,0 +1,18 @@
+<h1>My Watchlist</h1>
+
+<ul>
+  <% @lists.each do |list| %>
+    <li>
+      <%= link_to list.name, list_path(list) %>
+    </li>
+  <% end %>
+</ul>
+
+<h3>Create your new movie list</h3>
+
+<%= simple_form_for @list do |f| %>
+  <%= f.input :name, label: false, placeholder: 'Name your new list' %>
+  <div>
+    <%= f.button :submit, "Create List" %>
+  </div>
+<% end %>

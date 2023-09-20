@@ -1,0 +1,87 @@
+.title-banner {
+  background-image: linear-gradient(to bottom right, rgb(26, 25, 25), rgb(73, 72, 72), gold);
+  padding: 50px;
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.movie-card img {
+  width: 300px;
+  height: 400px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  display: block;
+  margin: 10px auto;
+}
+
+/* Style for the movie card */
+.movie-card {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  height: 720px;
+  padding: 15px;
+  margin: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  transform: translateZ(0); /* a new stacking context for the 3D transforms */
+  transition: transform 0.2s ease-in-out; /* Smooth transition for the hover */
+}
+
+/* Making the entire card move forward on hover */
+.movie-card:hover {
+  transform: scale(1.05) translate(5%, 5%);
+}
+
+/* Style for the movie poster image */
+.movie-poster {
+  display: block;
+  width: 300px;
+  height: 400px;
+  object-fit: cover; /* Ensures the image covers the area without distorting the aspect ratio */
+}
+
+/* Styling the title, overview, and rating */
+.movie-title,
+.movie-overview,
+.movie-rating {
+  margin: 10px; /* Example margin, adjust as necessary */
+  font-size: 14px;
+}
+
+.movie-title {
+  font-size: 24px;
+}
+
+.movie-rating {
+  position: absolute;
+  bottom: 1%;
+  right: 1%;
+}
+
+/* Grid layout for responsiveness */
+.movie-grid {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 24px; /* Spacing between grid items, adjust as necessary */
+}
+
+/* For wider screens, maybe you want more space between the items */
+@media screen and (min-width: 768px) {
+  .movie-grid {
+    gap: 40px;
+  }
+}
+
+.bookmark-movie {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 300px;
+  height: 300px;
+  padding: 50px;
+  background-color: lightseagreen;
+}
