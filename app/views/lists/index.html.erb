@@ -1,18 +1,21 @@
-<h1>My Watchlist</h1>
 
-<ul>
-  <% @lists.each do |list| %>
-    <li>
-      <%= link_to list.name, list_path(list) %>
-    </li>
-  <% end %>
-</ul>
+<div class="container p-3">
+  <h1 class="list-title">Movie Watchlists</h1>
 
-<h3>Create your new movie list</h3>
-
-<%= simple_form_for @list do |f| %>
-  <%= f.input :name, label: false, placeholder: 'Name your new list' %>
-  <div>
-    <%= f.button :submit, "Create List" %>
+  <div class="card-list card-grid">
+    <% @lists.each do |list| %>
+      <div class="movie-list card">
+        <%= link_to list.name, list_path(list) %>
+      </div>
+    <% end %>
   </div>
-<% end %>
+
+  <h3>Create your new movie list</h3>
+
+  <%= simple_form_for @list do |f| %>
+    <%= f.input :name, label: false, placeholder: 'Name your new list' %>
+    <div>
+      <%= f.button :submit, "Create List" %>
+    </div>
+  <% end %>
+</div>

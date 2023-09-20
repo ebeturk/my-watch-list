@@ -15,7 +15,7 @@
 
 <div class="bookmark-movie">
   <%= simple_form_for [@list, Bookmark.new] do |f| %>
-    <%= f.association :movie, label: false, prompt: "Add a movie" %>
+    <%= f.association :movie, label: false, prompt: "Find a movie" %>
     <%= f.input :comment, label: false, placeholder: "Add a comment" %>
     <%= f.button :submit, "Add Movie to List" %>
   <% end %>
