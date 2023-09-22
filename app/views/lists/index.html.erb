@@ -1,21 +1,27 @@
 
-<div class="container p-3">
-  <h1 class="list-title">Movie Watchlists</h1>
+<div class="lists-container">
+  <h1 class="list-title">
+    Movie Watchlists
+  </h1>
 
-  <div class="card-list card-grid">
+  <div class="lists">
     <% @lists.each do |list| %>
-      <div class="movie-list card">
+      <div class="movie-list <%= list.name.parameterize %>" style="background-image: url(<%= asset_path("#{list.name.parameterize}.jpg") %>);">
         <%= link_to list.name, list_path(list) %>
       </div>
     <% end %>
   </div>
 
-  <h3>Create your new movie list</h3>
 
-  <%= simple_form_for @list do |f| %>
-    <%= f.input :name, label: false, placeholder: 'Name your new list' %>
-    <div>
-      <%= f.button :submit, "Create List" %>
-    </div>
-  <% end %>
 </div>
+  <div class="create-list">
+    <h3>Create your new movie list</h3>
+    <div class="list-form">
+    <%= simple_form_for @list do |f| %>
+      <%= f.input :name, label: false, placeholder: 'Name your new list' %>
+      <div>
+        <%= f.button :submit, "Create List" %>
+      </div>
+      <% end %>
+    </div>
+  </div>

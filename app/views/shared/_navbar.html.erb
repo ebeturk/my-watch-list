@@ -1,14 +1,8 @@
 <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
-  <div class="container-fluid">
+  <div class="container-fluid justify-content-between">
     <%= link_to "My Movie Watchlist", root_path, class: "navbar-brand" %>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse d-flex justify-content-around" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <%= link_to "Movie Lists", lists_path, class: "nav-link active" %>
-        </li>
+    <div class="collapse navbar-collapse d-flex" id="navbarNavDropdown">
+      <ul class="navbar-nav d-flex">
         <li>
           <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -17,12 +11,14 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown link
+            Movie Lists
           </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          <ul class="dropdown-menu list-dropdown">
+            <% List.all.each do |list| %>
+              <li class="">
+                <%= link_to list.name, class: "dropdown-item" %>
+              </li>
+            <% end %>
           </ul>
         </li>
       </ul>

@@ -1,12 +1,31 @@
-.navbar-lewagon {
+.navbar-nav {
   justify-content: space-between;
-  background: white;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.list-dropdown {
+  background-color: rgb(237, 241, 243);
+  position: absolute;
+  width: 200px;
+  top: 100px;
+  padding: 10px;
+  margin-right: 12px;
+  font-family: 'Mooli', sans-serif;
+  left: auto !important;
+  right: 0px; // or any other suitable value
+  a {
+    text-decoration: none;
+    color: rgb(17, 90, 129);
+    padding: 4px 8px;
+  }
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.dropdown {
+  margin-left: 20px;
+  position: relative;
+  margin-right: 20px;
+}
+
+#navbarNavDropdown {
+  justify-content: flex-end;
+  width: 100%;
 }
