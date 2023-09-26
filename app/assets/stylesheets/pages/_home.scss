@@ -1,9 +1,12 @@
 // Specific CSS for your home-page
-.navbar-dark {
-  height: 60px;
-  padding: 32px 0;
-}
+
 
 body {
-  border: 1px solid goldenrod;
+  // border: 1px solid goldenrod;
+}
+
+.page-container {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
 }

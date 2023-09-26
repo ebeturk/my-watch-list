@@ -1,17 +1,29 @@
+.navbar-dark {
+  height: 60px;
+  padding: 32px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  align-content: center;
+  background-color: rgb(4, 39, 51) !important;
+}
+
+.navbar-brand {
+  font-size: 16px !important;
+  padding: 8px 0;
+}
+
 .navbar-nav {
   justify-content: space-between;
 }
 
 .list-dropdown {
   background-color: rgb(237, 241, 243);
-  position: absolute;
-  width: 200px;
-  top: 100px;
-  padding: 10px;
-  margin-right: 12px;
+  // width: 200px;
+  // padding: 10px;
+  // margin-right: 12px;
   font-family: 'Mooli', sans-serif;
-  left: auto !important;
-  right: 0px; // or any other suitable value
+  // left: auto !important;
   a {
     text-decoration: none;
     color: rgb(17, 90, 129);
@@ -19,13 +31,16 @@
   }
 }
 
-.dropdown {
-  margin-left: 20px;
-  position: relative;
-  margin-right: 20px;
+.dropdown-toggle {
+  font-family: 'Mooli', sans-serif;
+  font-size: 16px;
+  color: rgb(237, 241, 243);
 }
 
-#navbarNavDropdown {
-  justify-content: flex-end;
-  width: 100%;
+.dropdown-menu {
+  margin-top: 22vh !important;
+}
+
+.container-fluid {
+  padding: 10px 20px;
 }

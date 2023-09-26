@@ -1,14 +1,13 @@
-<nav class="navbar navbar-dark navbar-expand-lg bg-dark">
-  <div class="container-fluid justify-content-between">
-    <%= link_to "My Movie Watchlist", root_path, class: "navbar-brand" %>
-    <div class="collapse navbar-collapse d-flex" id="navbarNavDropdown">
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <div>
+      <%= link_to root_path, class: 'text-decoration-none' do %>
+      <%= image_tag 'watchlist-logo.png', style: "width: 40px; border-radius: 8px" %>
+      <span class="navbar-brand mx-2">My Movie Watchlist</span>
+      <% end %>
+    </div>
+    <div class="d-flex" id="navbarNavDropdown">
       <ul class="navbar-nav d-flex">
-        <li>
-          <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-gold" type="submit">Search</button>
-          </form>
-        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Movie Lists
@@ -16,7 +15,7 @@
           <ul class="dropdown-menu list-dropdown">
             <% List.all.each do |list| %>
               <li class="">
-                <%= link_to list.name, class: "dropdown-item" %>
+                <%= link_to list.name, list_path(list), class: "dropdown-item" %>
               </li>
             <% end %>
           </ul>
