@@ -9,6 +9,19 @@
   font: goldenrod;
   color: goldenrod;
   padding: 12px;
-  background-color: rgb(15, 4, 51);
+  background-color: #1D303C;
   text-align: center;
+}
+
+.btn-watched {
+  font-size: 14px;
+  font-family: 'Mooli', sans-serif;
+  padding: 2px 4px;
+  background-color: goldenrod;
+  color: 1D303C;
+  margin: 6px 12px;
+  position: absolute;
+  bottom: 1%;
+  left: 1%;
+  border: 2px solid #1D303C;
 }

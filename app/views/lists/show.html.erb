@@ -11,6 +11,12 @@
       <h3 class='movie-title'><%= movie.title %></h3>
       <p class='movie-overview'><%= movie.overview %></p>
       <p class='movie-rating text-info'>IMDB Rating: <%= movie.rating %></p>
+      <% if movie.watched %>
+        <div class="watched-watermark">Watched</div>
+      <% end %>
+      <% unless movie.watched %>
+        <%= button_to "Mark as Watched", mark_movie_watched_list_path(@list, movie_id: movie.id), class: 'btn-watched' %>
+      <% end %>
     </div>
   <% end %>
 </div>

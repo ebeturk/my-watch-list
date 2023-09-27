@@ -27,9 +27,16 @@ class ListsController < ApplicationController
     end
   end
 
+  def mark_movie_watched
+    movie = Movie.find(params[:movie_id])
+    @list = @list = List.find(params[:id])
+    movie.update(watched: true)
+    redirect_to list_path(@list), notice: 'Movie marked as watched!'
+  end
+
   private
 
   def list_params
-    params.require(:list).permit(:name)
+    params.require(:list).permit(:name, :movie_id)
   end
 end
